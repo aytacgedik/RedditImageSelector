@@ -25,6 +25,9 @@ namespace RedditImgDownloader
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IDownloadRepository, RedditImgDownloadRepository>(); // Using singleton service to register dependency
+
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
