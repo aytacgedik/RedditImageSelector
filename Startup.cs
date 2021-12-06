@@ -43,9 +43,9 @@ namespace RedditImgDownloader
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RedditImgDownloader v1"));
+                app.UseHttpsRedirection();
             }
 
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
