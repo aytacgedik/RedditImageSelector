@@ -64,7 +64,7 @@ namespace RedditImgDownloader.Controllers
         /// <returns>A <see cref="CreatedAtActionResult" or A <see cref="NotFoundObjectResult"/></returns>
         [HttpPost]
         [Route("random")]
-        public ActionResult CreateJsonFile(string subreddit)
+        public ActionResult CreateJsonFile([FromBody] string subreddit)
         {
             try
             {
