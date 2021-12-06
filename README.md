@@ -13,7 +13,7 @@ Selects a random image url and select date to json file and return all selected 
 
 ## Demonstration with Swagger without docker image
 
-- Respond after execute
+- Random after execute
   ![random](./instruction/4.jpg)
   ![random](./instruction/5.jpg)
 - History after execute
