@@ -61,15 +61,15 @@ namespace RedditImgDownloader.Controllers
         /// <exception cref="Exception">
         ///   if repository.CreateJsonFile method throws an exception.
         /// </exception>
-        /// <returns>A <see cref="CreatedAtActionResult" or A <see cref="NotFoundObjectResult"/></returns>
+        /// <returns>A <see cref="string" or A <see cref="NotFoundObjectResult"/></returns>
         [HttpPost]
         [Route("random")]
-        public ActionResult CreateJsonFile([FromBody] string subreddit)
+        public ActionResult<string> CreateJsonFile([FromBody] string subreddit)
         {
             try
             {
-                repository.CreateJsonFile(subreddit);
-                return CreatedAtAction(nameof(ReturnJsonFiles), subreddit);
+                var url = repository.CreateJsonFile(subreddit);
+                return Ok(url);
             }
             catch (Exception e)
             {

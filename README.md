@@ -13,8 +13,8 @@ Selects a random image url and select date to json file and return all selected 
 
 ## Demonstration with Swagger without docker image
 
-- Random after execute
+- /random
   ![random](./instruction/4.jpg)
   ![random](./instruction/5.jpg)
-- History after execute
+- /history
   ![history](./instruction/3.jpg)
