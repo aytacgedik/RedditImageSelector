@@ -69,7 +69,7 @@ namespace RedditImgDownloader.Repositories
             }
         }
         ///<summary>
-        /// Selects random posts and saves its image url and select date as json.
+        /// Selects random posts and saves its image url, select date as json and return url.
         ///</summary>
         /// <param name="subreddit">
         ///   A <see cref="string"/> type representing a value.
@@ -80,7 +80,8 @@ namespace RedditImgDownloader.Repositories
         /// <exception cref="Exception">
         ///   throws the exceptions throwed from used methods
         /// </exception>
-        public void CreateJsonFile(string subreddit)
+        /// <returns>a <see cref="string"/></returns>
+        public string CreateJsonFile(string subreddit)
         {
             var webClient = new WebClient();
             var rand = new Random();
@@ -97,7 +98,7 @@ namespace RedditImgDownloader.Repositories
                     {
                         var webImage = new WebImage { url = randomPost.url, selectDate = DateTime.Now };
                         FileUtils.CreateJsonFile(webImage);
-                        return;
+                        return randomPost.url;
                     }
                     posts.RemoveAt(ranNumber);
                 }

@@ -7,7 +7,7 @@ namespace RedditImgDownloader.Repositories
     ///</summary>
     public interface IDownloadRepository
     {
-        void CreateJsonFile(string subreddit);
+        string CreateJsonFile(string subreddit);
         string ReturnJsonFiles();
     }
 }

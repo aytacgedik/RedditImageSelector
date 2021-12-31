@@ -20,5 +20,4 @@ Selects a random image url and select date to json file and return all selected 
   ![random](./instruction/4.jpg)
   ![random](./instruction/5.jpg)
 - /history
-
   ![history](./instruction/3.jpg)
